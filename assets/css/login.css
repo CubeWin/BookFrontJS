@@ -1,0 +1,14 @@
+.backgroundFull {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cw-form-login {
+    max-width: 450px;
+    border-radius: 25px;
+    box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.7),
+        10px 10px 20px rgba(51, 51, 51, 0.4)
+}

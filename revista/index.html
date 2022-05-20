@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Revista</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/purejscarousel.css">
+    <link rel="stylesheet" href="../assets/css/cw.css">
+    <link rel="stylesheet" href="../assets/css/ncw.css">
+</head>
+
+<body class="overflow-hidden">
+
+
+    <div id="background" class="w-100 overflow-hidden" style="background-image: url('../assets/image/wallpaper.jpg');background-size: 100%  auto; height: 100vh; padding: 0;
+    background-size: cover; background-position: center;">
+        <div class="cw-navbar w-100">
+            <div class="container">
+                <nav class="d-flex justify-content-between align-items-center">
+                    <a class="navbar-brand  fw-bold text-white d-flex justify-content-center align-items-center"
+                        href="#">
+                        <img src="../assets/image/cubewin.svg" alt="CubeWinLogo" class="d-inline-block align-text-top"
+                            style="width: 50px; height: 50px;">
+                        CubeWin
+                    </a>
+                    <div>
+                        <a href="../" class="card-link text-decoration-none text-white mx-3">
+                            <i class="fa fa-chevron-left"></i> Regresar
+                        </a>
+                        <a href="#" class="card-link text-decoration-none text-white">Log in <i
+                            class="fa fa-sign-in"></i></a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div id="book-content" class="d-flex justify-content-center align-items-center"
+            style="height: calc(100vh - 60px); overflow: hidden;">
+            <section class="position-absolute d-flex justify-content-center align-items-center">
+                <div class="position-relative margin-auto" id="content-magazine" style="transition: all .1s;">
+                    <div id="magazine" class="shadow conte-revista">
+                        <div id="cw-prevpage" class="cw-prev-page text-white" ignore="1"
+                            onclick="$('#btnPageLeft').trigger('click')">
+                            <i class=" fa fa-angle-left"></i>
+                        </div>
+                        <div id="cw-nextpage" class="cw-next-page text-white" ignore="1"
+                            onclick="$('#btnPageRight').trigger('click')">
+                            <i class=" fa fa-angle-right"></i>
+                        </div>
+                        <!-- ######### magazine ########### -->
+                    </div>
+                </div>
+                <div class="w-100 h-100 cw-centrar-center d-none" id="content-zoom">
+                    <div id="mydiv" class="d-flex">
+                        <div id="contentFirstPage" class="position-relative">
+                            <img src="" id="firstPage">
+                            <div class="position-absolute w-100 h-100 d-flex justify-content-center align-items-center"
+                                style="top: 0; z-index: -1">
+                                <i class="fa fa-spinner fa-spin fa-5x fa-fw text-white"></i>
+                            </div>
+                        </div>
+                        <div id="contentSecondPage" class="position-relative">
+                            <img src="" id="secondPage">
+                            <div class="position-absolute w-100 h-100 bg-dark d-flex justify-content-center align-items-center"
+                                style="top: 0; z-index: -1">
+                                <i class="fa fa-spinner fa-spin fa-5x fa-fw text-white"></i>
+                            </div>
+                        </div>
+                        <div class="position-absolute w-100 h-100" id="move" style="top: 0">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+
+
+    <div id="utiliti" class="cw-utiliti_box">
+        <div id="box-util-cw" class="box-util">
+            <div class="icon-box">
+                <a id="btn-icon-cw" onclick="open_navBox()" class="button-icon"><i class="fa fa-th-large"></i></a>
+            </div>
+            <div id="navigation" class="bg-dark navigation-cw">
+                <!-- #################### -->
+                <div id="carrusel-content-cw" class="carrusel-content"
+                    style="background-image: url('../assets/image/cub2.png'); z-index: 99;">
+                    <div style="left: 0; bottom: 150px;" id="cw-miniatura">
+                        <div class="px-3 d-flex">
+                            <div class="cw-prev-slider d-flex justify-content-center align-items-center rounded-left"
+                                id="cw-prev-slider"><i class="fa fa-chevron-left text-white"></i></div>
+                            <div id="carousel-cw" class="cw-carousel">
+                                <!-- ######### carousel ########### -->
+                            </div>
+                            <div class="cw-next-slider d-flex justify-content-center align-items-center rounded-right"
+                                id="cw-next-slider">
+                                <i class="fa fa-chevron-right text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- #################### -->
+            </div>
+            <div class="content-box">
+                <nav id="content-button-cw" class="content-button content-button-close">
+                    <button class="text-center" style="width: 45px" id="btnZoom">
+                        <i class=" fa fa-search"></i>
+                    </button>
+                    <button class="text-center" style="width: 45px" id="btnMiniatura" onclick="showMiniature()">
+                        <i class=" fa fa-th"></i>
+                    </button>
+                    <button class="text-center" style="width: 45px" id="btnPagIni">
+                        <i class=" fa fa-angle-double-left"></i>
+                    </button>
+                    <button class="text-center" style="width: 45px" id="btnPageLeft">
+                        <i class=" fa fa-angle-left"></i>
+                    </button>
+                    <button class="text-center" style="width: 45px" id="btnPageRight">
+                        <i class=" fa fa-angle-right"></i>
+                    </button>
+                    <button class="text-center" style="width: 45px" id="btnPagFin">
+                        <i class=" fa fa-angle-double-right"></i>
+                    </button>
+                    <button class="text-center" style="width: 45px" id="btnclose" onclick="close_navBox()">
+                        <i class=" fa fa-close"></i>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="../assets/js/turn.min.js"></script>
+    <script src="../assets/js/purejscarousel.js"></script>
+    <script src="../assets/js/book.js"></script>
+    <script src="../assets/js/cw.js"></script>
+    <script src="../assets/js/api/pages.js"></script>
+    <script>
+
+        let cwMyCarousel;
+
+        $('#btnPageLeft').click(function () {
+            $('#magazine').turn('previous');
+        });
+
+        $('#btnPageRight').click(function () {
+            $('#magazine').turn('next');
+        });
+
+        $('#cw-prev-slider').click(function () {
+            cwMyCarousel.goToPrevSlide();
+        });
+
+        $('#cw-next-slider').click(function () {
+            cwMyCarousel.goToNextSlide();
+        });
+
+        $('#btnPagIni').click(function () {
+            $('#magazine').turn('page', 1);
+        });
+
+        $('#btnPagFin').click(function () {
+            fin = $('#magazine').turn('pages');
+            $('#magazine').turn('page', fin);
+        });
+
+    </script>
+</body>
+
+</html>

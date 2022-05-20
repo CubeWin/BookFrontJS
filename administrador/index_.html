@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title class="text-uppercase">inicio</title>
+        <!-- CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="../assets/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="../assets/css/datatables.css" />
+        <link rel="stylesheet" href="../assets/css/administrador.css" />
+        <link rel="stylesheet" href="../assets/css/adm-body.css" />
+        <link rel="stylesheet" href="../assets/css/table.css" />
+    </head>
+    <body>
+        <div class="adm-grid cw-backLogin3" id="adm-grid-all">
+            <div
+                class="adm-nav"
+                style="background-image: url(../assets/image/cub2.png)"
+            >
+                <div
+                    class="adm-title d-flex justify-content-around align-items-center"
+                >
+                    <h1 class="text-uppercase m-0">Administrador</h1>
+                    <label for="admCheck" class="menu-icon-container">
+                        <div
+                            class="menu-icon transformed"
+                            id="menu-icon-cw"
+                        ></div>
+                    </label>
+                    <input
+                        type="checkbox"
+                        id="admCheck"
+                        autocomplete="off"
+                        class="d-none"
+                        onclick="checkAdmin()"
+                    />
+                </div>
+                <nav class="adm-navbar">
+                    <div class="cw-categoria-navbar">
+                        <div class="cw-categoria-title">Usuarios</div>
+                        <div class="cw-categoria-content">
+                            <!-- SUBCATEGORIA -->
+                            <div class="cw-subcategoria">
+                                <a
+                                    href="#"
+                                    class="cw-subcategoria-title text-decoration-none"
+                                >
+                                    <div class="cw-subcategoria-icon">
+                                        <i class="fa fa-user"></i>
+                                    </div>
+                                    <div class="cw-subcategoria-text">
+                                        Persona
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="cw-subcategoria">
+                                <a
+                                    href="#"
+                                    class="cw-subcategoria-title text-decoration-none"
+                                >
+                                    <div class="cw-subcategoria-icon">
+                                        <i class="fa fa-users"></i>
+                                    </div>
+                                    <div class="cw-subcategoria-text">
+                                        Usuario
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="cw-subcategoria">
+                                <div class="cw-subcategoria-title">
+                                    <div class="cw-subcategoria-icon">
+                                        <i class="fa fa-file"></i>
+                                    </div>
+                                    <div class="cw-subcategoria-text">
+                                        Tercero
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cw-subcategoria">
+                                <div class="cw-subcategoria-title">
+                                    <div class="cw-subcategoria-icon">
+                                        <i class="fa fa-align-justify"></i>
+                                    </div>
+                                    <div class="cw-subcategoria-text">
+                                        Cuarto
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CATEGORIA -->
+                    <div class="cw-categoria-navbar">
+                        <div class="cw-categoria-title">PÁGINA</div>
+                        <div class="cw-categoria-content">
+                            <div class="cw-subcategoria">
+                                <div
+                                    class="cw-subcategoria-title collapsed"
+                                    data-toggle="collapse"
+                                    data-target="#inicioSeccion"
+                                    aria-expanded="false"
+                                    aria-controls="collapseExample"
+                                >
+                                    <div class="cw-subcategoria-icon">
+                                        <i class="fa fa-home"></i>
+                                    </div>
+                                    <div class="cw-subcategoria-text">
+                                        Inicio
+                                    </div>
+                                    <div class="cw-icon-title">
+                                        <i class="fa fa-angle-down"></i>
+                                    </div>
+                                </div>
+                                <div
+                                    class="cw-subcategoria-content collapse"
+                                    id="inicioSeccion"
+                                >
+                                    <!-- SUBCATEGORIA-ITEM -->
+                                    <div class="cw-item-rightbar">
+                                        <div class="cw-item-bar"></div>
+                                    </div>
+                                    <div class="cw-subcategoria">
+                                        <a
+                                            href="http://localhost/new/pg/administrador/seccion/1"
+                                            class="cw-subcategoria-title"
+                                        >
+                                            <div class="cw-subcategoria-text">
+                                                Carrusel
+                                            </div>
+                                        </a>
+                                        <a
+                                            href="http://localhost/new/pg/administrador/seccion/2"
+                                            class="cw-subcategoria-title"
+                                        >
+                                            <div class="cw-subcategoria-text">
+                                                Servicios
+                                            </div>
+                                        </a>
+                                        <a
+                                            href="http://localhost/new/pg/administrador/seccion/3"
+                                            class="cw-subcategoria-title"
+                                        >
+                                            <div class="cw-subcategoria-text">
+                                                Presentación
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cw-subcategoria">
+                                <div
+                                    class="cw-subcategoria-title collapsed"
+                                    data-toggle="collapse"
+                                    data-target="#nosotrosSeccion"
+                                    aria-expanded="false"
+                                    aria-controls="collapseExample"
+                                >
+                                    <div class="cw-subcategoria-icon">
+                                        <i class="fa fa-address-card"></i>
+                                    </div>
+                                    <div class="cw-subcategoria-text">
+                                        Nosotros
+                                    </div>
+                                    <div class="cw-icon-title">
+                                        <i class="fa fa-angle-down"></i>
+                                    </div>
+                                </div>
+                                <div
+                                    class="cw-subcategoria-content collapse"
+                                    id="nosotrosSeccion"
+                                >
+                                    <div class="cw-item-rightbar">
+                                        <div class="cw-item-bar"></div>
+                                    </div>
+                                    <div class="cw-subcategoria">
+                                        <a
+                                            href="http://localhost/new/pg/administrador/seccion/4"
+                                            class="cw-subcategoria-title"
+                                        >
+                                            <div class="cw-subcategoria-text">
+                                                Carrusel
+                                            </div>
+                                        </a>
+                                        <a
+                                            href="http://localhost/new/pg/administrador/seccion/5"
+                                            class="cw-subcategoria-title"
+                                        >
+                                            <div class="cw-subcategoria-text">
+                                                Servicios
+                                            </div>
+                                        </a>
+                                        <a
+                                            href="http://localhost/new/pg/administrador/seccion/6"
+                                            class="cw-subcategoria-title"
+                                        >
+                                            <div class="cw-subcategoria-text">
+                                                Presentación
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="adm-header">
+                <div
+                    class="container-fluid h-100 d-flex justify-content-between"
+                >
+                    <div class="cw-estatus"></div>
+                    <div
+                        class="d-flex justify-content-end align-items-center h-100"
+                    >
+                        <a href="#" class="btn btn-light">
+                            <i class="fa fa-power-off text-danger"></i>
+                            &nbsp;Salir
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="adm-body cw-shadow-inset overflow-auto cw-bg-custom1">
+                <div
+                    class="p-1 p-sm-3 p-md-4 p-lg-5 position-relative"
+                    style="min-height: calc(100vh - 60px)"
+                >
+                    <div
+                        class="position-absolute h-100 w-100 d-flex justify-content-center"
+                        style="top: 0; left: 0"
+                    >
+                        <div class="d-block text-center my-auto">
+                            <h2 class="font-weight-bold fa-2x">BIENVENIDOS</h2>
+                            <p>
+                                <span class="text-dark" style="font-size: 18px">
+                                    Sistema de Gestión en contenido web
+                                </span>
+                                <br />
+                                <small class="text-muted">
+                                    En caso de fallas comunicarse con el
+                                    desarrollador
+                                </small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cw-body-footer">
+                    <div class="container-fluid text-center text-white py-3">
+                        <span class="h6"
+                            >&copy; Lorem ipsum dolor sit amet
+                            consectetur.</span
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cw-modal cw-disabled-modal" id="myModal1">
+            <div class="cw-modal-content">
+                <div class="cw-modal-card p-2">
+                    <div class="card h-100">
+                        <div
+                            class="card-header d-flex justify-content-between align-items-center"
+                        >
+                            <h6
+                                class="text-uppercase m-0 h4 font-weight-bold text-muted"
+                            >
+                                Modal 01
+                            </h6>
+                            <button
+                                type="button"
+                                class="cw-close-lateral px-3 bg-transparent border-0"
+                                cw-lateral-target="#myModal1"
+                            >
+                                <i class="fa fa-times text-danger fa-1x"></i>
+                            </button>
+                        </div>
+                        <div class="card-body h-100 grey lighten-3"></div>
+                        <div class="card-footer text-right">
+                            <a
+                                href="#"
+                                class="btn border-light px-3 cw-close-lateral"
+                                cw-lateral-target="#myModal1"
+                                >cancelar</a
+                            >
+                            <a href="#" class="btn btn-primary px-3">aceptar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cw-modal cw-disabled-modal" id="myModal2">
+            <div class="cw-modal-content">
+                <div class="cw-modal-card p-2">
+                    <div class="card h-100">
+                        <div
+                            class="card-header d-flex justify-content-between align-items-center"
+                        >
+                            <h6
+                                class="text-uppercase m-0 h4 font-weight-bold text-muted"
+                            >
+                                Modal 02
+                            </h6>
+                            <button
+                                type="button"
+                                class="cw-close-lateral px-3 bg-transparent border-0"
+                                cw-lateral-target="#myModal2"
+                            >
+                                <i class="fa fa-times text-danger fa-1x"></i>
+                            </button>
+                        </div>
+                        <div class="card-body h-100 grey lighten-3"></div>
+                        <div class="card-footer text-right">
+                            <a
+                                href="#"
+                                class="btn border-light px-3 cw-close-lateral"
+                                cw-lateral-target="#myModal2"
+                                >cancelar</a
+                            >
+                            <a href="#" class="btn btn-primary px-3">aceptar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- JS -->
+        <script
+            type="text/javascript"
+            src="../assets/js/jquery.min.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="../assets/js/popper.min.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="../assets/js/bootstrap.min.js"
+        ></script>
+        <script type="text/javascript" src="../assets/js/mdb.min.js"></script>
+        <script type="text/javascript" src="../assets/js/all.min.js"></script>
+        <script
+            type="text/javascript"
+            src="../assets/js/jquery.validate.min.js"
+        ></script>
+        <script type="text/javascript" src="../assets/js/cwc.js"></script>
+        <script type="text/javascript" src="../assets/js/sweet.min.js"></script>
+        <script
+            type="text/javascript"
+            src="../assets/js/datatables.min.js"
+        ></script>
+        <script type="text/javascript" src="../assets/js/jPages.js"></script>
+    </body>
+</html>

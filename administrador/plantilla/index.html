@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title class="text-uppercase">Registro Persona</title>
+        <!-- CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="../../assets/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="../../assets/css/administrador.css" />
+        <link rel="stylesheet" href="../../assets/css/adm-body.css" />
+        <link rel="stylesheet" href="../../assets/css/table.css" />
+        <link rel="stylesheet" href="../../assets/css/modal.css" />
+    </head>
+    <body>
+        <div class="adm-grid cw-backLogin3" id="adm-grid-all">
+            <div
+                class="adm-nav"
+                style="background-image: url(../../assets/image/cub2.png)"
+            >
+                <div
+                    class="adm-title d-flex justify-content-around align-items-center"
+                >
+                    <h1 class="text-uppercase m-0">Administrador</h1>
+                    <label for="admCheck" class="menu-icon-container">
+                        <div
+                            class="menu-icon transformed"
+                            id="menu-icon-cw"
+                        ></div>
+                    </label>
+                    <input
+                        type="checkbox"
+                        id="admCheck"
+                        autocomplete="off"
+                        class="d-none"
+                        onclick="checkAdmin()"
+                    />
+                </div>
+                <nav class="adm-navbar">
+                    <div class="cw-categoria-navbar">
+                        <div class="cw-categoria-title">Usuarios</div>
+                        <div class="cw-categoria-content">
+                            <!-- SUBCATEGORIA -->
+                            <div class="cw-subcategoria">
+                                <a
+                                    href="#"
+                                    class="cw-subcategoria-title text-decoration-none"
+                                >
+                                    <div class="cw-subcategoria-icon">
+                                        <i class="fa fa-user"></i>
+                                    </div>
+                                    <div class="cw-subcategoria-text">
+                                        Persona
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="cw-subcategoria">
+                                <a
+                                    href="#"
+                                    class="cw-subcategoria-title text-decoration-none"
+                                >
+                                    <div class="cw-subcategoria-icon">
+                                        <i class="fa fa-users"></i>
+                                    </div>
+                                    <div class="cw-subcategoria-text">
+                                        Usuario
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="cw-subcategoria">
+                                <div class="cw-subcategoria-title">
+                                    <div class="cw-subcategoria-icon">
+                                        <i class="fa fa-file"></i>
+                                    </div>
+                                    <div class="cw-subcategoria-text">
+                                        Tercero
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cw-subcategoria">
+                                <div class="cw-subcategoria-title">
+                                    <div class="cw-subcategoria-icon">
+                                        <i class="fa fa-align-justify"></i>
+                                    </div>
+                                    <div class="cw-subcategoria-text">
+                                        Cuarto
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CATEGORIA -->
+                    <div class="cw-categoria-navbar">
+                        <div class="cw-categoria-title">PÁGINA</div>
+                        <div class="cw-categoria-content">
+                            <div class="cw-subcategoria">
+                                <div
+                                    class="cw-subcategoria-title collapsed"
+                                    data-toggle="collapse"
+                                    data-target="#inicioSeccion"
+                                    aria-expanded="false"
+                                    aria-controls="collapseExample"
+                                >
+                                    <div class="cw-subcategoria-icon">
+                                        <i class="fa fa-home"></i>
+                                    </div>
+                                    <div class="cw-subcategoria-text">
+                                        Inicio
+                                    </div>
+                                    <div class="cw-icon-title">
+                                        <i class="fa fa-angle-down"></i>
+                                    </div>
+                                </div>
+                                <div
+                                    class="cw-subcategoria-content collapse"
+                                    id="inicioSeccion"
+                                >
+                                    <!-- SUBCATEGORIA-ITEM -->
+                                    <div class="cw-item-rightbar">
+                                        <div class="cw-item-bar"></div>
+                                    </div>
+                                    <div class="cw-subcategoria">
+                                        <a
+                                            href="http://localhost/new/pg/administrador/seccion/1"
+                                            class="cw-subcategoria-title"
+                                        >
+                                            <div class="cw-subcategoria-text">
+                                                Carrusel
+                                            </div>
+                                        </a>
+                                        <a
+                                            href="http://localhost/new/pg/administrador/seccion/2"
+                                            class="cw-subcategoria-title"
+                                        >
+                                            <div class="cw-subcategoria-text">
+                                                Servicios
+                                            </div>
+                                        </a>
+                                        <a
+                                            href="http://localhost/new/pg/administrador/seccion/3"
+                                            class="cw-subcategoria-title"
+                                        >
+                                            <div class="cw-subcategoria-text">
+                                                Presentación
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cw-subcategoria">
+                                <div
+                                    class="cw-subcategoria-title collapsed"
+                                    data-toggle="collapse"
+                                    data-target="#nosotrosSeccion"
+                                    aria-expanded="false"
+                                    aria-controls="collapseExample"
+                                >
+                                    <div class="cw-subcategoria-icon">
+                                        <i class="fa fa-address-card"></i>
+                                    </div>
+                                    <div class="cw-subcategoria-text">
+                                        Nosotros
+                                    </div>
+                                    <div class="cw-icon-title">
+                                        <i class="fa fa-angle-down"></i>
+                                    </div>
+                                </div>
+                                <div
+                                    class="cw-subcategoria-content collapse"
+                                    id="nosotrosSeccion"
+                                >
+                                    <div class="cw-item-rightbar">
+                                        <div class="cw-item-bar"></div>
+                                    </div>
+                                    <div class="cw-subcategoria">
+                                        <a
+                                            href="http://localhost/new/pg/administrador/seccion/4"
+                                            class="cw-subcategoria-title"
+                                        >
+                                            <div class="cw-subcategoria-text">
+                                                Carrusel
+                                            </div>
+                                        </a>
+                                        <a
+                                            href="http://localhost/new/pg/administrador/seccion/5"
+                                            class="cw-subcategoria-title"
+                                        >
+                                            <div class="cw-subcategoria-text">
+                                                Servicios
+                                            </div>
+                                        </a>
+                                        <a
+                                            href="http://localhost/new/pg/administrador/seccion/6"
+                                            class="cw-subcategoria-title"
+                                        >
+                                            <div class="cw-subcategoria-text">
+                                                Presentación
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="adm-header">
+                <div
+                    class="container-fluid h-100 d-flex justify-content-between"
+                >
+                    <div class="cw-estatus"></div>
+                    <div
+                        class="d-flex justify-content-end align-items-center h-100"
+                    >
+                        <a href="#" class="btn btn-light">
+                            <i class="fa fa-power-off text-danger"></i>
+                            &nbsp;Salir
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="adm-body cw-bg-custom1 cw-shadow-inset overflow-auto">
+                <div
+                    class="p-1 p-sm-3 p-md-4 p-lg-5 position-relative"
+                    style="min-height: calc(100vh - 60px)"
+                >
+                    <div class="d-flex align-items-center">
+                        <h1 class="cw-text-teal">Persona</h1>
+                        <span
+                            class="cw-badge-teal cw-bg-teal small p-2 h-50 mx-3"
+                        >
+                            Formulario
+                        </span>
+                    </div>
+                    <hr />
+                    <div class="card border-0 mt-5 cw-shadow-custom1">
+                        <div
+                            class="cw-front-title cw-backLogin4 d-flex mx-4 px-4 py-2 rounded justify-content-center align-items-center text-white cw-shadow-front position-relative"
+                        >
+                            <h2 class="h5 m-0 text-center">
+                                Lista de Usuarios
+                            </h2>
+                        </div>
+                        <div class="card-body table-responsive">
+                            <div
+                                class="px-1 py-3 mb-3 rounded d-flex justify-content-between"
+                            >
+                                <button
+                                    id="nuevoPersona"
+                                    onclick="clearFormPersona()"
+                                    class="btn btn-white fw-bold d-flex align-items-center justify-content-center px-3 px-lg-4 text-uppercase cw-shadow-botton1 cw-open-lateral"
+                                    cw-lateral-target="#myModal1"
+                                >
+                                    <i class="fa fa-plus-circle text-info"></i>
+                                    <span class="d-none d-md-block">
+                                        &nbsp;Agregar
+                                    </span>
+                                </button>
+                                <form class="form-inline">
+                                    <div
+                                        class="md-form my-0 d-flex justify-content-center"
+                                    >
+                                        <input
+                                            class="form-control mr-sm-2 w-75 rounded-0 border-0 border-bottom"
+                                            type="text"
+                                            placeholder="Nombre o Apellido"
+                                            aria-label="Buscar"
+                                            onkeyup="myFunctionCW()"
+                                            id="buscarPersona"
+                                        />
+                                        <div
+                                            class="btn btn-white font-weight-bold px-3 m-auto cw-shadow-botton1"
+                                        >
+                                            <i
+                                                class="fa fa-search text-primary"
+                                            ></i>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="p-1">
+                                <table
+                                    class="text-center m-0"
+                                    id="tablePersona"
+                                >
+                                    <thead
+                                        style="background: rgb(100, 175, 131)"
+                                    >
+                                        <th
+                                            class="text-capitalize font-weight-bold"
+                                        >
+                                            #
+                                        </th>
+                                        <th
+                                            class="text-capitalize font-weight-bold"
+                                        >
+                                            Persona
+                                        </th>
+                                        <th
+                                            class="text-capitalize font-weight-bold"
+                                        >
+                                            Telefono
+                                        </th>
+                                        <th
+                                            class="text-capitalize font-weight-bold"
+                                        >
+                                            Correo
+                                        </th>
+                                        <th
+                                            class="text-capitalize font-weight-bold"
+                                        >
+                                            Genero
+                                        </th>
+                                        <th
+                                            class="text-capitalize font-weight-bold"
+                                        >
+                                            editar
+                                        </th>
+                                        <th
+                                            class="text-capitalize font-weight-bold"
+                                        >
+                                            eliminar
+                                        </th>
+                                    </thead>
+                                    <tbody id="listarPersona">
+                                        <tr class="animated fadeIn">
+                                            <td>1</td>
+                                            <td>Eliud Pedraza Churata</td>
+                                            <td>925940807</td>
+                                            <td>eliud16pc@hotmail.com</td>
+                                            <td>Masculino</td>
+                                            <td class="position-relative">
+                                                <a
+                                                    class="cw-card-link text-info w-100 h-100"
+                                                    onclick="editPersona(1)"
+                                                >
+                                                    <i class="fa fa-edit"></i>
+                                                </a>
+                                            </td>
+                                            <td class="position-relative">
+                                                <a
+                                                    class="cw-card-link text-danger w-100 h-100"
+                                                    onclick="editPersona(1)"
+                                                >
+                                                    <i class="fa fa-trash"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div
+                                id="pagePersona"
+                                class="cw-pageNumber text-end mt-4 w-100"
+                            >
+                                <!-- Only Decoration -->
+                                <a class="jp-previous jp-disabled">Anterior</a>
+                                <a class="jp-number jp-current">1</a>
+                                <a class="jp-next jp-disabled">Siguiente</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cw-body-footer">
+                    <div class="container-fluid text-center text-white py-3">
+                        <span class="h6">
+                            &copy; Lorem ipsum dolor sit amet consectetur.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cw-modal cw-disabled-modal" id="myModal1">
+            <div class="cw-modal-content">
+                <div class="cw-modal-card p-2">
+                    <div class="card h-100">
+                        <div
+                            class="card-header d-flex justify-content-between align-items-center"
+                        >
+                            <h6
+                                class="text-uppercase m-0 h4 font-weight-bold text-muted"
+                            >
+                                Modal 01
+                            </h6>
+                            <button
+                                type="button"
+                                class="cw-close-lateral px-3 bg-transparent border-0"
+                                cw-lateral-target="#myModal1"
+                            >
+                                <i class="fa fa-times text-danger fa-1x"></i>
+                            </button>
+                        </div>
+                        <div class="card-body h-100 grey lighten-3"></div>
+                        <div class="card-footer text-right">
+                            <button
+                                class="btn border-light px-3"
+                                cw-lateral-target="#myModal1"
+                                onclick="closeLateral()"
+                            >
+                                cancelar
+                            </button>
+                            <a href="#" class="btn btn-primary px-3">aceptar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- JS -->
+        <script type="text/javascript" src="../../assets/js/cwc.js"></script>
+    </body>
+</html>
